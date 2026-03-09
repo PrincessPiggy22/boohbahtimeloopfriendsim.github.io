@@ -1,5 +1,5 @@
 
-document.getElementById("start").onclick = function() {
+document.getElementsByClassName("start").onclick = function() {
 
   window.location.href = "game.html";
 
