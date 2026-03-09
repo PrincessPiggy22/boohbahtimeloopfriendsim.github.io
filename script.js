@@ -1,2 +1,4 @@
 
-let StoryText = document.getElementById("storytext");
+let StoryText = document.getElementById("storytext"); // getting the text
+
+const backgrounds =[""];
