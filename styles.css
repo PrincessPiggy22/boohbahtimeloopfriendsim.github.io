@@ -25,7 +25,7 @@ body{
 }
 
 /* Style the button and place it in the middle of the container/image */
-.titlescreen .start {
+.titlescreen button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,6 +40,6 @@ body{
   border-radius: 5px;
 }
 
-.titlescreen .start:hover {
+.titlescreen button:hover {
   background-color: black;
 }
