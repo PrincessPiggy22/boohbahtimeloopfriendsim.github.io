@@ -1,8 +1,17 @@
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #dreamText {
   color: #fcf7f7;
   font-size: 10vw;
   opacity: 1;
+  margin: 0;
+  padding: 0;
   /*animation: fadeText 4s ease-in-out; */
 }
 
