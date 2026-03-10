@@ -27,11 +27,28 @@ function loadImage(key, src) {
             initGame();
         }
     };
+    images[key].onerror = () => {
+        console.log(`Failed to load ${src}`);
+        imagesLoaded++;
+        if (imagesLoaded === totalImages) {
+            initGame();
+        }
+    };
 }
 
 for (const [key, src] of Object.entries(imageSources)) {
     loadImage(key, src);
 }
+
+// Fallback: start game after 5 seconds even if images don't load
+setTimeout(() => {
+    if (!gameStarted) {
+        console.log('Starting game with unloaded images');
+        initGame();
+    }
+}, 5000);
+
+let gameStarted = false;
 
 // Game variables
 let player = { x: 400, y: 500, width: 20, height: 20, health: 100 };
@@ -52,6 +69,7 @@ const phaseText = document.getElementById('phaseText');
 const phaseTimerDiv = document.getElementById('phaseTimer');
 
 function initGame() {
+    gameStarted = true;
     updateHealthBars();
     updatePhaseText();
     gameLoop();
@@ -147,10 +165,20 @@ function draw() {
     ctx.strokeRect(50, 300, 700, 250);
 
     // Draw boss
-    ctx.drawImage(images.lorax, boss.x, boss.y, boss.width, boss.height);
+    if (images.lorax.complete && images.lorax.naturalHeight !== 0) {
+        ctx.drawImage(images.lorax, boss.x, boss.y, boss.width, boss.height);
+    } else {
+        ctx.fillStyle = 'green';
+        ctx.fillRect(boss.x, boss.y, boss.width, boss.height);
+    }
 
     // Draw player
-    ctx.drawImage(images.heart, player.x, player.y, player.width, player.height);
+    if (images.heart.complete && images.heart.naturalHeight !== 0) {
+        ctx.drawImage(images.heart, player.x, player.y, player.width, player.height);
+    } else {
+        ctx.fillStyle = 'red';
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+    }
 
     // Draw attacks
     attacks.forEach(attack => attack.draw());
@@ -185,7 +213,12 @@ class Truffle {
         this.y += this.speed;
     }
     draw() {
-        ctx.drawImage(images.truffle, this.x, this.y, this.width, this.height);
+        if (images.truffle.complete && images.truffle.naturalHeight !== 0) {
+            ctx.drawImage(images.truffle, this.x, this.y, this.width, this.height);
+        } else {
+            ctx.fillStyle = 'brown';
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     offScreen() {
         return this.y > canvas.height;
@@ -211,7 +244,12 @@ class BearThing {
         this.x += this.direction * 2;
     }
     draw() {
-        ctx.drawImage(images.bearThing, this.x, this.y, this.width, this.height);
+        if (images.bearThing.complete && images.bearThing.naturalHeight !== 0) {
+            ctx.drawImage(images.bearThing, this.x, this.y, this.width, this.height);
+        } else {
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     offScreen() {
         return this.y > canvas.height;
@@ -233,7 +271,12 @@ class Axe {
         this.y += this.dy;
     }
     draw() {
-        ctx.drawImage(images.axe, this.x, this.y, this.width, this.height);
+        if (images.axe.complete && images.axe.naturalHeight !== 0) {
+            ctx.drawImage(images.axe, this.x, this.y, this.width, this.height);
+        } else {
+            ctx.fillStyle = 'gray';
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     offScreen() {
         return this.x < 0 || this.x > canvas.width || this.y > canvas.height;
