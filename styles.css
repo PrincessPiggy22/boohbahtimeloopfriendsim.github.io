@@ -1,14 +1,9 @@
-
-
-
-
-
-
-
 body{
   margin:0;
   background:black;
 }
+
+/* Title Screen*/
 
 /* Container needed to position the button. Adjust the width as needed */
 .titlescreen {
@@ -19,7 +14,7 @@ body{
 }
 
 /* Make the image responsive */
-.container img {
+.titlescreen img {
   width: 100%;
   height: auto;
 }
