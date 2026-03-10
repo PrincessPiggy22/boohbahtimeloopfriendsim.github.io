@@ -98,6 +98,11 @@ function updatePhaseText() {
     phaseText.textContent = text;
 }
 
+function updateHealthBars() {
+    playerHealthBar.style.width = `${(player.health / 100) * 100}%`;
+    bossHealthBar.style.width = `${(boss.health / 200) * 100}%`;
+}
+
 function gameLoop() {
     update();
     draw();
