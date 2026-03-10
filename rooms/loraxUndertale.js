@@ -44,10 +44,12 @@ let attackInterval = 100; // frames between attacks
 
 let currentPhase = 'safe';
 let phaseTimer = 0;
-const phaseDuration = 300; // frames, about 5 seconds at 60fps
+const phaseDuration = 240; // frames, about 4 seconds at 60fps
 const phases = ['safe', 'truffle', 'bearThing', 'axe'];
+let currentPhaseIndex = 0;
 
 const phaseText = document.getElementById('phaseText');
+const phaseTimerDiv = document.getElementById('phaseTimer');
 
 function initGame() {
     updateHealthBars();
@@ -83,12 +85,11 @@ function gameLoop() {
 function update() {
     // Phase management
     phaseTimer++;
+    const timeLeft = Math.ceil((phaseDuration - phaseTimer) / 60); // seconds
+    phaseTimerDiv.textContent = `Time left: ${timeLeft}s`;
     if (phaseTimer >= phaseDuration) {
-        let newPhase;
-        do {
-            newPhase = phases[Math.floor(Math.random() * phases.length)];
-        } while (newPhase === currentPhase); // Avoid same phase consecutively
-        currentPhase = newPhase;
+        currentPhaseIndex = (currentPhaseIndex + 1) % phases.length;
+        currentPhase = phases[currentPhaseIndex];
         phaseTimer = 0;
         updatePhaseText();
     }
@@ -253,6 +254,7 @@ function resetGame() {
     player.y = 500;
     attacks = [];
     currentPhase = 'safe';
+    currentPhaseIndex = 0;
     phaseTimer = 0;
     updateHealthBars();
     updatePhaseText();
