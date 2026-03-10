@@ -7,3 +7,6 @@
 ## Credits
 #### Dream sequence background by jaykdoe from Uiverse.io 
 [Woah Stars](https://uiverse.io/jaykdoe/tasty-dragon-12)
+
+## Ideas
+Deadzingbah is actually the lorax and comes back to life to initiate a boss battle (undertale style)
