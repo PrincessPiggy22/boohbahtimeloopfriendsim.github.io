@@ -1,0 +1,1 @@
+const dialouge1 = ["*Insert Boohbah Screaming as their being murdered noises*" , "That sounded like it's coming from the dome"];
