@@ -22,7 +22,7 @@ const inventory = [];
 
 // Start Button
 document.getElementById("start").onclick = function() {
-
+  console.log("start game");
   window.location.href = "rooms/intro.html";
 
 };
@@ -38,15 +38,18 @@ const yesKeyDialouge = ["Unlocked", ""];
 
 document.getElementById("key").onclick = function() {
   inventory.push("key");
+  console.log(inventory);
   goThruDialouge("roomText", gotKeyDialouge);
 
 };
 
 document.getElementById("door").onclick = function() {
   if(inventory.includes("key")) {
+    console.log("you have the key");
     goThruDialouge("roomText", yesKeyDialouge);
     window.location.href = "DomeCar.html";
   } else {
+    console.log("you don't have the key");
     goThruDialouge("roomText", noKeyDialouge);
   }
 };
