@@ -252,7 +252,10 @@ function resetGame() {
     player.x = 400;
     player.y = 500;
     attacks = [];
+    currentPhase = 'safe';
+    phaseTimer = 0;
     updateHealthBars();
+    updatePhaseText();
 }
 
 // Event listeners
