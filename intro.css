@@ -1,5 +1,5 @@
 
-#message {
+.dreamText {
   opacity: 0;
   animation: fadeText 4s ease-in-out;
 }
