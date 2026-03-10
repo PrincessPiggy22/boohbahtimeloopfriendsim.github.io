@@ -1,3 +1,7 @@
+
+let done = 0;
+
+
 function goThruDialouge(id, array, characters) {
 
   let index = 0;
@@ -12,6 +16,9 @@ function goThruDialouge(id, array, characters) {
     document.getElementById(id).innerHTML = array[index];
     document.getElementById("characterImage").src = characters[index];
     
+  }
+  if(index == array.length){
+    done++;
   }
 });
 };
@@ -39,4 +46,8 @@ const dialouge2 = ["Skibbbb"];
 
 console.log("There is an imposter among us");
 goThruDialouge("roomText", dialouge1, character1);
-goThruDialouge("roomText", dialouge2, character2);
+
+if (done == 1){
+ goThruDialouge("roomText", dialouge2, character2);
+}
+
