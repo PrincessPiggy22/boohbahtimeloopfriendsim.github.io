@@ -119,8 +119,8 @@ function update() {
     if (keys.ArrowDown || keys.s) player.y += 5;
 
     // Keep player in bounds
-    player.x = Math.max(0, Math.min(canvas.width - player.width, player.x));
-    player.y = Math.max(300, Math.min(canvas.height - player.height, player.y)); // Box area
+    player.x = Math.max(50, Math.min(730, player.x));
+    player.y = Math.max(300, Math.min(530, player.y)); // Box area
 
     // Generate attacks
     if (currentPhase !== 'safe') {
