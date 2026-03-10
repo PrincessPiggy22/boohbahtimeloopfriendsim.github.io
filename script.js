@@ -1,4 +1,6 @@
 
+
+// SET UP
 // function to be able to click thru dialouge
 function goThruDialouge(id, array, file) {
 
@@ -16,7 +18,9 @@ function goThruDialouge(id, array, file) {
 });
 };
 
+const inventory = [];
 
+// Start Button
 document.getElementById("start").onclick = function() {
 
   window.location.href = "rooms/intro.html";
