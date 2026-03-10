@@ -25,8 +25,9 @@ ZingPhil = "../sprites/Philzingzingcollins.png";
 Hum = "../sprites/Humbah.png";
 Jum = "../sprites/Jumbah.png";
 Zum = "../sprites/Zumbah.png";
+You = "../sprites/you.png"; 
 
-const character =[];
-const dialouge1 = ["&quot;What happened?&quot;"];
+const character1 =[You,Bling,You,Bling,You,Bling];
+const dialouge1 = ["&quot;What happened?&quot;","&quot;Zing Zing Zingbah's dead&quot;","&quot;Who are you?&quot;","&quot;Blingbah, I run the casino&quot;","&quot;Gambling?&quot;","&quot;Not for You&quot;"];
 
 goThruDialouge("roomText", dialouge1);
