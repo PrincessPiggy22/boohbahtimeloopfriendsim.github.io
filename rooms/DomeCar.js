@@ -18,8 +18,11 @@ function goThruDialouge(id, array, characters) {
     
   }
   if(index == array.length){
-    sleep(2000);
+    if (index == array.length) {
+  setTimeout(() => {
     window.location.href = "WhatAnUndertale.html";
+  }, 2000);
+}
   }
 });
 };
