@@ -1,6 +1,6 @@
 
-.dreamText {
-  color: #fff;
+#dreamText {
+  color: #fcf7f7;
   font-size: large;
   opacity: 0;
   animation: fadeText 4s ease-in-out;
