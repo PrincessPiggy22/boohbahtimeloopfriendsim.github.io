@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  
-    <title>Your Room</title>
-    <link rel="stylesheet" href="room.css"/>
-    <script src="PlayerRoom.js" defer></script>
+    <title>Boss Fight</title>
+    <link rel="stylesheet" href="undertale.css"/>
+    <script src="loraxUndertale.js" defer></script>
 </head>
 <body>
-    <p>What an Undertale</p>
-    
-
+    <div class="Room">
+        <div id="healthBars">
+            <div id="playerHealthBar">
+                <div id="playerHealthFill"></div>
+                <span>Player</span>
+            </div>
+            <div id="bossHealthBar">
+                <div id="bossHealthFill"></div>
+                <span>Lorax</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <button id="attackButton">
+            <img src="../sprites/Key.png" alt="Attack" width="50" height="50">
+        </button>
+    </div>
         
 </body>

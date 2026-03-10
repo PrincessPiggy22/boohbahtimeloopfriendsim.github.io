@@ -1,0 +1,56 @@
+#roomText {
+  color: #000000;
+  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.Room {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: black;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#healthBars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#playerHealthBar, #bossHealthBar {
+  width: 300px;
+  height: 20px;
+  background-color: #333;
+  border: 1px solid white;
+  position: relative;
+}
+
+#playerHealthFill, #bossHealthFill {
+  height: 100%;
+  background-color: green;
+  width: 100%;
+}
+
+#playerHealthBar span, #bossHealthBar span {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 14px;
+}
+
+#gameCanvas {
+  border: 1px solid white;
+  background-color: #000;
+}
+
+#attackButton {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
