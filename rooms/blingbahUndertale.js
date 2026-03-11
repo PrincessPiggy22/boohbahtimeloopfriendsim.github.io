@@ -180,8 +180,8 @@ function update() {
 
     // Check win
     if (boss.health <= 0) {
-        alert('You defeated Blingbah!');
-        window.location.href = 'DomeCar2.html';
+        alert('Awww dangit!');
+        window.location.href = 'DomeCar3.html';
     }
 }
 
