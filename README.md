@@ -3,8 +3,12 @@
 #### Simply click this link and press start 
 [Murder on The Boohbah Express](https://princesspiggy22.github.io/whomurderedzingzingzingbah.github.io/)
 
-## Lore i guess
+## Loreeeee i guess
 ### You won a lottery to go on the Boohbah Express before it opens to the public. After you go to bed, a scream wakes you up and *gasp* ZingZingZingbah has been MURDERED!!!! Can you find out who did it? I mean I hope so because they literally tell you.
+
+
+## AI
+### The undertale style fight was made mostly with the AI in code spaces. It stoped working so I had too do somethings on my own (and with google). 
 
 
 ## Credits

@@ -63,6 +63,7 @@ let keys = {};
 
 let attackTimer = 0;
 let attackInterval = 100; // frames between attacks
+let attackCooldown = 0; // Cooldown for player attacks
 
 let currentPhase = 'safe';
 let phaseTimer = 0;
@@ -377,13 +378,14 @@ document.addEventListener('keyup', (e) => {
     keys[e.key] = false;
 });
 
-attackButton.addEventListener('click', () => {
-    console.log('Attack button clicked');
-    if (currentPhase !== 'safe') {
-        console.log('Cannot attack during attack phase');
-        return;
+document.addEventListener('keydown', (e) => {
+    if (e.key === ' ') {
+        e.preventDefault();
+        if (currentPhase === 'safe' && attackCooldown === 0) {
+            const damage = Math.floor(Math.random() * 10) + 5; // 5-15 damage
+            boss.health -= damage;
+            updateHealthBars();
+            attackCooldown = 30; // 0.5 seconds cooldown at 60fps
+        }
     }
-    const damage = Math.floor(Math.random() * 10) + 5; // 5-15 damage
-    boss.health -= damage;
-    updateHealthBars();
 });
