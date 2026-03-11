@@ -167,6 +167,12 @@ function update() {
                 alert('You lost! Restarting...');
                 resetGame();
             }
+            return; // skip further checks for this attack
+        }
+        // timed explosion for blue chips
+        if (attack instanceof BlueChip && attack.life >= 60) {
+            attacks.push(new Explosion(attack.x, attack.y));
+            attacks.splice(index, 1);
         }
     });
 
@@ -261,7 +267,9 @@ class BlueChip {
         this.y = y;
         this.width = 30; // bigger chip
         this.height = 30;
-        this.speed = 9; // even faster
+        this.speed = 5; // slower now
+        this.life = 0; // frame counter for timed explosion
+        // initial velocity toward targetX for a start
         const dx = targetX - x;
         const dy = 300;
         const dist = Math.sqrt(dx * dx + dy * dy);
