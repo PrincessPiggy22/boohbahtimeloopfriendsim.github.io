@@ -60,12 +60,12 @@ let attacks = [];
 let keys = {};
 
 let attackTimer = 0;
-let attackInterval = 100; // frames between attacks
+let attackInterval = 60; // frames between attacks (was 100)
 let attackCooldown = 0; // Cooldown for player attacks
 
 let currentPhase = 'safe';
 let phaseTimer = 0;
-const phaseDuration = 240; // frames, about 4 seconds at 60fps
+const phaseDuration = 180; // frames, about 3 seconds at 60fps (was 240)
 const phases = ['safe', 'red', 'blue', 'green'];
 let currentPhaseIndex = 0;
 
@@ -208,9 +208,9 @@ function draw() {
 function generateAttack() {
     switch (currentPhase) {
         case 'red':
-            // shoot multiple red chips quickly toward the player's current x
-            for (let i = 0; i < 5; i++) {
-                const targetX = player.x + (Math.random() * 40 - 20);
+            // shoot many red chips quickly toward the player's current x
+            for (let i = 0; i < 10; i++) {
+                const targetX = player.x + (Math.random() * 60 - 30);
                 attacks.push(new RedChip(boss.x + boss.width / 2, boss.y + boss.height, targetX));
             }
             break;
@@ -231,7 +231,7 @@ class RedChip {
         this.y = y;
         this.width = 20;
         this.height = 20;
-        this.speed = 8; // fast
+        this.speed = 10; // even faster
         const dx = targetX - x;
         const dy = 300; // always move downwards
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -261,7 +261,7 @@ class BlueChip {
         this.y = y;
         this.width = 20;
         this.height = 20;
-        this.speed = 5;
+        this.speed = 7; // faster
         const dx = targetX - x;
         const dy = 300;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -291,7 +291,7 @@ class GreenChip {
         this.y = y;
         this.width = 20;
         this.height = 20;
-        this.speed = 4;
+        this.speed = 6; // a bit faster
         const dx = targetX - x;
         const dy = 300;
         const dist = Math.sqrt(dx * dx + dy * dy);
