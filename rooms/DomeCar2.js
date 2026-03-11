@@ -40,8 +40,8 @@ Lorax = "../sprites/Lorax.png";
 
 
 // Begning convo
-const character1 =[You,Bling,You,Bling,You,Bling,You,You,Lorax];
-const dialouge1 = ["&quot;What happened?&quot;","&quot;Zing Zing Zingbah's dead&quot;","&quot;Who are you?&quot;","&quot;Blingbah, I run the casino&quot;","&quot;Gambling?&quot;","&quot;No&quot;","&quot;Anyway...&quot;","&quot;Who could've-&quot;","&quot;I am the Lorax, I speak for the trees, I killed the Zingbah, It was MEEEEEEE!!!&quot;"];
+const character1 =[Lorax];
+const dialouge1 = ["&quot;NOOOOOOO How could you defeat me!!!!&quot;"];
 
 console.log("There is an imposter among us");
 goThruDialouge("roomText", dialouge1, character1);
