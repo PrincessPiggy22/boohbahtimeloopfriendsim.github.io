@@ -177,8 +177,7 @@ function update() {
 
     // Check win
     if (boss.health <= 0) {
-        alert('You won! Returning to title...');
-        window.location.href = '../index.html';
+        window.location.href = 'DomeCar2.html';
     }
 }
 
