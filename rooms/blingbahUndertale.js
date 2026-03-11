@@ -223,8 +223,9 @@ function generateAttack() {
             }
             break;
         case 'blue':
-            // single blue chip aimed at player
-            attacks.push(new BlueChip(boss.x + boss.width / 2, boss.y + boss.height, player.x));
+            // spawn two blue chips toward player for faster barrage
+            attacks.push(new BlueChip(boss.x + boss.width / 2 - 20, boss.y + boss.height, player.x));
+            attacks.push(new BlueChip(boss.x + boss.width / 2 + 20, boss.y + boss.height, player.x));
             break;
         case 'green':
             // single green chip, slower
