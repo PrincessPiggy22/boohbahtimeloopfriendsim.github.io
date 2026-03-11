@@ -17,7 +17,7 @@ function goThruDialouge(id, array, characters) {
   if(index == array.length){
     if (index == array.length) {
   setTimeout(() => {
-    window.location.href = "WhatAnUndertale.html";
+    window.location.href = "LetsGoGambling.html";
   }, 3000);
 }
   }
@@ -41,10 +41,9 @@ Lorax = "../sprites/Lorax.png";
 
 
 // Begning convo
-const character1 =[Lorax,Lorax,Zing];
-const dialouge1 = ["&quot;NOOOOOOO How could you defeat me!!!!&quot;","&quot;I'll have to use my seceret ultimate mega move!!!&quot;","&quot;THE POWER OF BORAX COMPELLS YOU!!!!!!!&quot;"];
-
-console.log("There is an imposter among us");
+const character1 =[Lorax,Lorax,ZingBorax,Lorax,You,Zing,You,Bling];
+const dialouge1 = ["&quot;NOOOOOOO How could you defeat me!!!!&quot;","&quot;I'll have to use my seceret ultimate mega move!!!&quot;","&quot;THE POWER OF BORAX COMPELLS YOU!!!!!!!&quot;","&quot;NOOOOOOOOOOOOOOOOOOOO!!!!!!&quot;","&quot;I thought you were dead?&quot;","&quot; lol no&quot;","...","&quot;... Gambling time&quot;"];
+console.log("plot twist");
 goThruDialouge("roomText", dialouge1, character1);
 
 
