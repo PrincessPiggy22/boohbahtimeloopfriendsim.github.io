@@ -54,6 +54,10 @@ setTimeout(() => {
 
 let gameStarted = false;
 
+// Audio
+let bossMusic = new Audio('../HowBadCanATimeBe.mp3');
+bossMusic.loop = true;
+
 // Game variables
 let player = { x: 400, y: 500, width: 20, height: 20, health: 100 };
 let boss = { x: 350, y: 50, width: 100, height: 100, health: 200 };
