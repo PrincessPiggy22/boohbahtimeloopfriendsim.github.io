@@ -42,7 +42,6 @@ let attacks = [];
 let keys = {};
 
 let attackTimer = 0;
-let attackInterval = 60;
 let attackCooldown = 0;
 
 let currentPhase = 'safe';
@@ -108,7 +107,7 @@ function update() {
 
     if (currentPhase !== 'safe') {
         attackTimer++;
-        if (attackTimer >= attackInterval) {
+        if (attackTimer >= (currentPhase === 'beam' ? 120 : 60)) {
             generateAttack();
             attackTimer = 0;
         }
