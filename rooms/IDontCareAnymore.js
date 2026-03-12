@@ -217,10 +217,18 @@ class Truffle {
         this.width = 20;
         this.height = 20;
         this.speed = speed;
+
+        this.collidesWithPlayer = true;
+
+        this.onHitPlayer = () => {
+            player.health -= 5;
+        };
     }
+
     update() {
         this.y += this.speed;
     }
+
     draw() {
         if (images.truffle.complete && images.truffle.naturalHeight !== 0) {
             ctx.drawImage(images.truffle, this.x, this.y, this.width, this.height);
@@ -229,6 +237,7 @@ class Truffle {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
+
     offScreen() {
         return this.y > canvas.height || this.y + this.height < 0;
     }
