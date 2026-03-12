@@ -158,7 +158,7 @@ function update() {
 
     if (boss.health <= 0) {
         alert('You defeated ZingZingZingbah!');
-        window.location.href = 'DomeCar4.html';
+        window.location.href = 'DomeCar5.html';
     }
 }
 
