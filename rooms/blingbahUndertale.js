@@ -53,7 +53,7 @@ setTimeout(() => {
 
 let gameStarted = false;
 
-let bossMusic = new Audio('../Boohbah.mp3');
+let bossMusic = new Audio('../MoneyMoneyMoney.mp3');
 bossMusic.loop = true;
 
 // Game variables
