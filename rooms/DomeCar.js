@@ -2,15 +2,24 @@
 function goThruDialouge(id, array, characters) {
 
   let index = 0;
-  document.getElementById(id).innerHTML = array[0];
-
+  let text = document.getElementById(id).innerHTML;
+  text = array[0];
   document.addEventListener("click", function() {
   index++;
   if(index == 1 | index == 3 | index == 5){
     document.getElementById("characterImage").src = characters[index];
-  }
-  if(index == 9){
+   text.classList.remove("Zing-Talk", "Lorax-Talk", "You-Talk");
+   document.getElementById("characterImage").style.opacity = "1";
+    text.classList.add("Bling-Talk");
+  } else if(index == 9){
+    text.classList.remove("Zing-Talk", "Bling-Talk", "You-Talk");
     document.getElementById("characterImage").src = characters[index];
+    document.getElementById("characterImage").style.opacity = "1";
+    text.classList.add("Lorax-Talk");
+  } else {
+    text.classList.remove("Zing-Talk", "Lorax-Talk", "Bling-Talk");
+    document.getElementById("characterImage").style.opacity = "0";
+    text.classList.add("You-Talk");
   }
   if(index < array.length) {
     //document.getElementById("characterImage").src = characters[index];
