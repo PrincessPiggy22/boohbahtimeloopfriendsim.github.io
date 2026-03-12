@@ -167,7 +167,7 @@ function update() {
             updateHealthBars();
             if (player.health <= 0) {
                 alert('You lost! Restarting...');
-                resetGame();
+                window.location.href = "LetsGoGambling.html";
             }
             return; // skip further checks for this attack
         }

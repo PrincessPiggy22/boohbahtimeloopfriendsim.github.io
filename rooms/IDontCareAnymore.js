@@ -143,8 +143,7 @@ function update() {
             updateHealthBars();
             if (player.health <= 0) {
                 alert('You lost! Restarting...');
-                resetGame();
-                return; // bail out of update entirely
+                window.location.href = "PhilZingZingCollins.html";
             }
             continue;
         }

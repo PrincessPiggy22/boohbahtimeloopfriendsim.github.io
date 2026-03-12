@@ -142,8 +142,7 @@ function update() {
             updateHealthBars();
             if (player.health <= 0) {
                 alert('You lost! Restarting...');
-                resetGame();
-                return; // bail out of update entirely
+                window.location.href = "ZingZingZingbah.html";
             }
             continue;
         }
@@ -153,8 +152,7 @@ function update() {
             player.health = 0;
             updateHealthBars();
             alert('You got swept by the beam!');
-            resetGame();
-            return; // bail out
+            window.location.href = "ZingZingZingbah.html";
         }
     }
 

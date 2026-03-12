@@ -2,18 +2,45 @@
 function goThruDialouge(id, array, characters) {
 
   let index = 0;
-  document.getElementById(id).innerHTML = array[0];
-  document.getElementById("characterImage").src = characters[0];
-
+  let text = document.getElementById(id);
+  text.innerHTML = array[0];
   document.addEventListener("click", function() {
   index++;
-
-  if(index < array.length) {
-
-    document.getElementById(id).innerHTML = array[index];
+  //const character1 =[Lorax,Lorax,ZingBorax,Lorax,You,Zing,You,Bling];
+  if(index == 0 || index == 1 || index == 3){
     document.getElementById("characterImage").src = characters[index];
+   document.getElementById("characterImage").style.opacity = "1";
+    text.style.backgroundColor = "#f1dd00";
+    text.style.color = "rgb(0, 0, 0)";
+    text.style.border = "3px solid #ff4eaf";
+
+  }  else if(index == 2 || index == 5){
+    document.getElementById("characterImage").src = characters[index];
+    document.getElementById("characterImage").style.opacity = "1";
+    text.style.backgroundColor = "#ff5733";
+    text.style.color = "white";
+    text.style.border = "3px solid #c70039";
+ 
+  } else if(index >= 7){
+    document.getElementById("characterImage").src = Bling;
+    document.getElementById("characterImage").style.opacity = "1";
+    text.style.backgroundColor = "#0cf100";
+    text.style.color = "rgb(0, 0, 0)";
+    text.style.border = "3px solid #066b1c";
+  }
+  else {
+    document.getElementById("characterImage").style.opacity = "0";
+    text.style.backgroundColor = "#0cf100";
+    text.style.color = "rgb(0, 0, 0)";
+    text.style.border = "3px solid #066b1c";
     
   }
+  if(index < array.length) {
+    //document.getElementById("characterImage").src = characters[index];
+    document.getElementById(id).innerHTML = array[index];
+    
+  }
+
   if(index == array.length){
     if (index == array.length) {
       document.getElementById("characterImage").src = characters[index];
