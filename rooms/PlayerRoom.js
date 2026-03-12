@@ -24,5 +24,5 @@ function goThruDialouge(id, array) {
 
 // Player Room
 // Starting Dialouge
-const dialouge1 = ["*Insert Boohbah Screaming as their being murdered noises*" , "That sounded like it's coming from the Dome Car","I should get my key and check it out", " "];
+const dialouge1 = ["*Insert Boohbah Screaming as their being murdered noises*" , "That sounded like it's coming from the Dome Car"];
 goThruDialouge("roomText", dialouge1);
