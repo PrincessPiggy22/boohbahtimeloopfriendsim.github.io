@@ -2,7 +2,7 @@
 ## How to Play
 #### Click the Link and Press Start 
 #### Click the screen to advance dialouge
-#### battles should take 3 seconds to load in not just click the screen
+#### battles should take 3 seconds to load in not just click the screen and wait 3 seconds
 #### To attack press space and use Arrow Keys to move
 
 [Who Murdered ZingZingZingbah](https://princesspiggy22.github.io/whomurderedzingzingzingbah.github.io/)
