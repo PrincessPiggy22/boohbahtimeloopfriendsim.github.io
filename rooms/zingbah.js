@@ -63,6 +63,7 @@ const phaseTimerDiv = document.getElementById('phaseTimer');
 
 function initGame() {
     gameStarted = true;
+    bossMusic.play();
     updateHealthBars();
     updatePhaseText();
     gameLoop();
@@ -135,7 +136,7 @@ function update() {
             attacks.splice(i, 1);
             continue;
         }
-
+ 
         if (attack.collidesWithPlayer && collides(attack, player)) {
             attack.onHitPlayer && attack.onHitPlayer();
             attacks.splice(i, 1);

@@ -39,7 +39,7 @@ function goThruDialouge(id, array, characters) {
     if (index == array.length) {
       document.getElementById("characterImage").src = characters[index];
   setTimeout(() => {
-    window.location.href = "LetsGoGambling.html";
+    window.location.href = "ZingZingZingbah.html";
   }, 3000);
 }
   }

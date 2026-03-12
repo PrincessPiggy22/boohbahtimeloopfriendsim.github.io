@@ -151,7 +151,7 @@ function update() {
             generateAttack();
             attackTimer = 0;
         }
-    }
+    } 
 
     // Update attacks
     attacks.forEach((attack, index) => {
