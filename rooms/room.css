@@ -9,8 +9,6 @@
 
 .Room {
   position: relative;
-  text-align: center;
-  color: white;
 }
 
 #roomText {
@@ -44,7 +42,7 @@
     border-radius: 5px;
     
     /* Optional: Limit the width */
-    width: 300px;
+    /*width: 300px; */
     
     /* Optional: Add space outside the border to separate it from other elements */
     margin: 10px;
