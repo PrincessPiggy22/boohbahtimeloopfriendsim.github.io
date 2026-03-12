@@ -240,7 +240,7 @@ class Beam {
         this.width=350; this.height=250; // half the box
         this.x = side==='left'?50:50+700-350;
         this.y = 300;
-        this.warningDuration = 55;    // frames before beam fires (extended warning)
+        this.warningDuration = 45;    // frames before beam fires (extended warning)
         this.activeDuration = 30;     // frames while damaging
         this.duration = this.warningDuration + this.activeDuration;
         this.active = false;
