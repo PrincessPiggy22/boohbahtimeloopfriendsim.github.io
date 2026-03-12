@@ -1,6 +1,6 @@
 #roomText {
   color: #000000;
-  font-size: 1vw;
+  font-size: 2vw;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 1;
   margin: 0;
@@ -46,4 +46,14 @@ img {
     
     /* Optional: Add space outside the border to separate it from other elements */
     margin: 10px;
+}
+
+.Room #characterImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 300px;
+  height: 300px;
 }
