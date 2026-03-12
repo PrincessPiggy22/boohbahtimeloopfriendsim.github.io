@@ -2,11 +2,11 @@
 function goThruDialouge(id, array, characters) {
 
   let index = 0;
-  let text = document.getElementById(id).innerHTML;
-  text = array[0];
+  let text = document.getElementById(id);
+  text.innerHTML = array[0];
   document.addEventListener("click", function() {
   index++;
-  if(index == 1 | index == 3 | index == 5){
+  if(index == 1 || index == 3 || index == 5){
     document.getElementById("characterImage").src = characters[index];
    document.getElementById("characterImage").style.opacity = "1";
     text.style.backgroundColor = "#0cf100";
@@ -22,7 +22,7 @@ function goThruDialouge(id, array, characters) {
  
   } else {
     document.getElementById("characterImage").style.opacity = "0";
-    text.style.backgroundColor = "898989";
+    text.style.backgroundColor = "#898989";
     text.style.color = "white";
     text.style.border = "3px solid #575757";
     
