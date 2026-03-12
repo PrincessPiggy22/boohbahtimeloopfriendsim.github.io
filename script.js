@@ -27,11 +27,6 @@ document.getElementById("start").onclick = function() {
 
 };
 
-document.getElementById("test").onclick = function() {
-  console.log("test game");
-  window.location.href = "rooms/DomeCar3.html";
-};
-
 
 // if key not in inventory --> don't open door 
 
