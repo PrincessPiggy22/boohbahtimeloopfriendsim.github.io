@@ -25,3 +25,25 @@ img {
   height: auto;
 }
 
+.colored-box {
+    /* Set the background color of the box */
+    background-color: #ff5733; /* A bright red-orange color */
+    
+    /* Set the text color for readability */
+    color: white; 
+    
+    /* Add space around the text and inside the border */
+    padding: 20px; 
+    
+    /* Add a border: width, style, and color */
+    border: 3px solid #c70039; 
+    
+    /* Optional: Add rounded corners */
+    border-radius: 5px;
+    
+    /* Optional: Limit the width */
+    width: 300px;
+    
+    /* Optional: Add space outside the border to separate it from other elements */
+    margin: 10px;
+}
